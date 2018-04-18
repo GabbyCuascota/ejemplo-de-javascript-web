@@ -39,3 +39,14 @@ usuario.mascotas = {};
 usuario.mascotas.nombre = 'gabby';//crear cosas a diferente nivel
 console.log(usuario);
 var arreglo = [1, "Gabriela", true, undefined, null, new Date(),{nombre: "Gabriela"}, [1, 2, 3, true]];
+function sumarNumeros(numA, numB){
+    return numA + numB;
+}
+console.log(sumarNumeros(1,2));
+console.log(sumarNumeros(1,2.223));
+var potenciaDeDosDeUnNumero = function noEsNecesarioPonerElNombre(numero){
+};
+var potenciaDeDosDeUnNumeroDos = function (numero){
+};
+console.log(potenciaDeDosDeUnNumero(3, 23, 3, 4, 5, 2));
+console.log(potenciaDeDosDeUnNumero(2));
