@@ -28,6 +28,7 @@ var usuario = {
     apellido: "Cuascota",
     cedula: '1728394675',
     edad: 28,
+    edadAlCuadrado: potenciaDeDosDeUnNumero(this.edad),
     imprimir: function () {
       console.log(this.nombre + ' ' +this.apellido+ ' ' + this.edad+ ' ');
     }
@@ -42,7 +43,7 @@ console.log(usuario);
 usuario.mascotas = {};
 usuario.mascotas.nombre = 'gabby';//crear cosas a diferente nivel
 console.log(usuario);
-var arreglo = [1, "Gabriela", true, undefined, null, new Date(),{nombre: "Gabriela"}, [1, 2, 3, true]];
+var arreglo = [1, "Gabriela", true, undefined,usuario.imprimir, usuario.imprimir(), null, new Date(),{nombre: "Gabriela"}, [1, 2, 3, true]];
 function sumarNumeros(numA, numB){
     return numA + numB;
 }
