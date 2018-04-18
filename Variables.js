@@ -54,4 +54,5 @@ var potenciaDeDosDeUnNumeroDos = function (numero){
 };
 console.log(potenciaDeDosDeUnNumero(3, 23, 3, 4, 5, 2));
 console.log(potenciaDeDosDeUnNumero(2));
-usuario.imprimir();
+//usuario.imprimir();
+console.log(usuario.imprimir);
