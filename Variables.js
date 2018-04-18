@@ -28,7 +28,11 @@ var usuario = {
     apellido: "Cuascota",
     cedula: '1728394675',
     edad: 28,
+    imprimir: function () {
+      console.log(this.nombre + ' ' +this.apellido+ ' ' + this.edad+ ' ');
+    }
 };
+
 console.log(usuario.nombre);
 console.log(usuario);
 delete usuario.edad; // borrar variables
@@ -50,3 +54,4 @@ var potenciaDeDosDeUnNumeroDos = function (numero){
 };
 console.log(potenciaDeDosDeUnNumero(3, 23, 3, 4, 5, 2));
 console.log(potenciaDeDosDeUnNumero(2));
+usuario.imprimir();
