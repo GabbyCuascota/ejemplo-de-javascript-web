@@ -24,7 +24,20 @@ var Usuario = /** @class */ (function () {
 }());
 var estefania = {
     nombre: 'estefania',
-    casado: 
+    casado: false,
+    edad: 26
 };
 var gabriela = new Usuario('Gabriela', false, 26);
 console.log(gabriela);
+console.log(estefania);
+//VENTAJA DE SINTAXIS
+var UsuarioDos = /** @class */ (function () {
+    function UsuarioDos(nombre, casado, edad) {
+        this.nombre = nombre;
+        this.casado = casado;
+        this.edad = edad;
+    }
+    return UsuarioDos;
+}());
+var gabrielaDos = new Usuario('Gabriela', false, 26);
+console.log(gabrielaDos);

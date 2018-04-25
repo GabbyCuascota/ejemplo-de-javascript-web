@@ -29,10 +29,23 @@ class Usuario {
         this.casado = casado;
         this.edad = edad;
     }
-    let estefania = {
-        nombre: 'estefania';
-        casado:
-    }
 }
+let estefania = {
+    nombre: 'estefania',
+    casado: false,
+    edad: 26
+};
 let gabriela: Usuario = new Usuario('Gabriela', false, 26);
 console.log(gabriela);
+console.log(estefania);
+
+//VENTAJA DE SINTAXIS
+class UsuarioDos{
+    constructor(public nombre: string,
+                private casado: boolean,
+                protected edad: number){
+
+    }
+}
+let gabrielaDos = new Usuario('Gabriela', false, 26);
+console.log(gabrielaDos);
