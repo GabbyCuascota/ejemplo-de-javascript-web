@@ -41,7 +41,7 @@ console.log(estefania);
 
 //VENTAJA DE SINTAXIS
 class UsuarioDos{
-    constructor(nombre: string,
+    constructor(public nombre: string,
                 private _casado: boolean,
                 protected _edad: number){
     }
@@ -51,11 +51,22 @@ class UsuarioDos{
     set casado(casado: boolean){
         this.casado = casado;
     }
-    imprimirUsuario (saludo:string):string{
+    imprimirUsuario (saludo: string): string{
         //template strings
         return `${saludo}. Mi nombre es ${this.nombre}, estoy casado ${this._casado}
         , mi edad es ${this._edad}`;
     }
 }
 let gabrielaDos = new Usuario('Gabriela', false, 26);
-console.log(gabrielaDos);
+console.log(gabrielaDos.casado);
+console.log(gabrielaDos.imprimirUsuario('Hola soy Gabby'));
+let abby:UsuarioTres ={
+    nombre:'abby',
+    casado: false,
+    edad: 23
+};
+interface UsuarioTres{
+    nombre: string;
+    casado?: boolean;
+    edad: number;
+}

@@ -33,6 +33,7 @@ console.log(estefania);
 //VENTAJA DE SINTAXIS
 var UsuarioDos = /** @class */ (function () {
     function UsuarioDos(nombre, _casado, _edad) {
+        this.nombre = nombre;
         this._casado = _casado;
         this._edad = _edad;
     }
@@ -53,4 +54,10 @@ var UsuarioDos = /** @class */ (function () {
     return UsuarioDos;
 }());
 var gabrielaDos = new Usuario('Gabriela', false, 26);
-console.log(gabrielaDos);
+console.log(gabrielaDos.casado);
+console.log(gabrielaDos.imprimirUsuario('Hola soy Gabby'));
+var abby = {
+    nombre: 'abby',
+    casado: false,
+    edad: 23
+};
