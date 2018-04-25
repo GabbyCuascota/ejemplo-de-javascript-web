@@ -42,7 +42,7 @@ var UsuarioDos = /** @class */ (function () {
             return this._casado;
         },
         set: function (casado) {
-            this.casado = casado;
+            this._casado = casado;
         },
         enumerable: true,
         configurable: true

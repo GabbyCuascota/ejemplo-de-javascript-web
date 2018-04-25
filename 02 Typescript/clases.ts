@@ -45,11 +45,11 @@ class UsuarioDos{
                 private _casado: boolean,
                 protected _edad: number){
     }
-    get casado (){
+    get casado() {
         return this._casado;
     }
     set casado(casado: boolean){
-        this.casado = casado;
+        this._casado = casado;
     }
     imprimirUsuario (saludo: string): string{
         //template strings
