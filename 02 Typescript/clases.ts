@@ -41,10 +41,20 @@ console.log(estefania);
 
 //VENTAJA DE SINTAXIS
 class UsuarioDos{
-    constructor(public nombre: string,
-                private casado: boolean,
-                protected edad: number){
-
+    constructor(nombre: string,
+                private _casado: boolean,
+                protected _edad: number){
+    }
+    get casado (){
+        return this._casado;
+    }
+    set casado(casado: boolean){
+        this.casado = casado;
+    }
+    imprimirUsuario (saludo:string):string{
+        //template strings
+        return `${saludo}. Mi nombre es ${this.nombre}, estoy casado ${this._casado}
+        , mi edad es ${this._edad}`;
     }
 }
 let gabrielaDos = new Usuario('Gabriela', false, 26);

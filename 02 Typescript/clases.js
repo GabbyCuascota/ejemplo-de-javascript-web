@@ -32,11 +32,24 @@ console.log(gabriela);
 console.log(estefania);
 //VENTAJA DE SINTAXIS
 var UsuarioDos = /** @class */ (function () {
-    function UsuarioDos(nombre, casado, edad) {
-        this.nombre = nombre;
-        this.casado = casado;
-        this.edad = edad;
+    function UsuarioDos(nombre, _casado, _edad) {
+        this._casado = _casado;
+        this._edad = _edad;
     }
+    Object.defineProperty(UsuarioDos.prototype, "casado", {
+        get: function () {
+            return this._casado;
+        },
+        set: function (casado) {
+            this.casado = casado;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    UsuarioDos.prototype.imprimirUsuario = function (saludo) {
+        //template strings
+        return saludo + ". Mi nombre es " + this.nombre + ", estoy casado " + this._casado + "\n        , mi edad es " + this._edad;
+    };
     return UsuarioDos;
 }());
 var gabrielaDos = new Usuario('Gabriela', false, 26);
